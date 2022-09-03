@@ -1,0 +1,7 @@
+long flippingBits(long n) {
+    
+    long max32int = UINT_MAX;
+    return max32int - n;
+    
+
+}
