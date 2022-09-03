@@ -1,0 +1,21 @@
+int lonelyinteger(vector<int> a) {
+    
+    if (a.size() == 1)
+        return a[0];
+    
+    map<int, int> aMap;
+    int unique;
+    
+    for (int i : a)
+    {
+        aMap[i]++;        
+    }
+    
+    
+    for (auto &[key,  value] : aMap)
+        if (value == 1)
+            unique = key;
+        
+    return unique;
+        
+}
