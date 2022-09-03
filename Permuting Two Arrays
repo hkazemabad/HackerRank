@@ -1,0 +1,15 @@
+string twoArrays(int k, vector<int> A, vector<int> B) {
+
+    multiset<int> a1;
+    multiset<int, greater<int>> b1;
+    for(int a : A)
+        a1.insert(a);
+    for(int b : B)
+        b1.insert(b);
+    
+    for (auto a = a1.begin(), b = b1.begin(); a != a1.end();  a++, b++)
+        if (*a + *b < k) {
+            return "NO";
+        }
+    return "YES";
+}
